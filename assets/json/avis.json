@@ -1,0 +1,34 @@
+[
+	{
+		"use_nom" : "Mr Anderson",
+		"avi_id": 1,
+		"avi_note": 5,
+		"avi_texte": "Super bougie, odeur incroyable! 🙋",
+		"prod_id": 1,
+		"avi_date": "2023-12-21"
+	},
+	{
+		"use_nom" : "Saïd Fadli",
+		"avi_id": 2,
+		"avi_note": 4,
+		"avi_texte": "Bonne qualité, mais un peu cher. 👌",
+		"prod_id": 1,
+		"avi_date": "2023-12-21"
+	},
+	{
+		"use_nom" : "Théo Barbier",
+		"avi_id": 3,
+		"avi_note": 3,
+		"avi_texte": "Odeur agréable mais ne dure pas longtemps. 😃",
+		"prod_id": 1,
+		"avi_date": "2023-12-21"
+	},
+	{
+		"use_nom" : "Mr Anderson",
+		"avi_id": 4,
+		"avi_note": 5,
+		"avi_texte": "Parfait pour un cadeau. 😍",
+		"prod_id": 1,
+		"avi_date": "2023-12-21"
+	}
+]

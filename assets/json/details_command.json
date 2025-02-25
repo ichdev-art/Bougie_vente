@@ -1,0 +1,26 @@
+[
+	{
+		"prod_id" : 1,
+		"com_id" : 1,
+		"com_date" : "2025-02-20",
+		"use_id" : 1,
+		"prod_nom" : "Bougie Vanille",
+		"prod_description" : "Bougie parfumée à la vanille",
+		"prod_prix" : 15.99,
+		"prod_ref" : 101,
+		"prod_qté" : 50,
+		"prod_image" : "vanille.jpg"
+	},
+	{
+		"prod_id" : 3,
+		"com_id" : 1,
+		"com_date" : "2025-02-20",
+		"use_id" : 1,
+		"prod_nom" : "Bougie Cèdre",
+		"prod_description" : "Bougie boisée au cèdre",
+		"prod_prix" : 14.75,
+		"prod_ref" : 103,
+		"prod_qté" : 40,
+		"prod_image" : "cedre.jpg"
+	}
+]

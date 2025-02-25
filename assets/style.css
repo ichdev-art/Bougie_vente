@@ -1,0 +1,17 @@
+img {
+    width: 16rem;
+    height: 16rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.zoom {
+    transition: transform .2s;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.1);
+  }

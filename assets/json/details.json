@@ -1,0 +1,12 @@
+[
+	{
+		"prod_id" : 1,
+		"prod_nom" : "Bougie Vanille",
+		"prod_description" : "Bougie parfumée à la vanille",
+		"prod_prix" : 15.99,
+		"prod_ref" : 101,
+		"prod_qté" : 50,
+		"prod_image" : "img/vanille.jpg",
+		"prod_cat" : "Bougies parfumées"
+	}
+]

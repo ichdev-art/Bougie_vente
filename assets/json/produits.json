@@ -1,0 +1,122 @@
+[
+	{
+		"prod_id" : 1,
+		"prod_nom" : "Bougie Vanille",
+		"prod_description" : "Bougie parfumée à la vanille",
+		"prod_prix" : 15.99,
+		"prod_ref" : 101,
+		"prod_qté" : 50,
+		"prod_image" : "img/vanille.jpg",
+		"prod_cat" : "Bougies parfumées"
+	},
+	{
+		"prod_id" : 2,
+		"prod_nom" : "Bougie Lavande",
+		"prod_description" : "Bougie relaxante à la lavande",
+		"prod_prix" : 12.50,
+		"prod_ref" : 102,
+		"prod_qté" : 30,
+		"prod_image" : "img/lavande.jpg",
+		"prod_cat" : "Bougies parfumées"
+	},
+	{
+		"prod_id" : 3,
+		"prod_nom" : "Bougie Cèdre",
+		"prod_description" : "Bougie boisée au cèdre",
+		"prod_prix" : 14.75,
+		"prod_ref" : 103,
+		"prod_qté" : 40,
+		"prod_image" : "img/cedre.jpg",
+		"prod_cat" : "Bougies parfumées"
+	},
+	{
+		"prod_id" : 4,
+		"prod_nom" : "Bougie Fruits Rouges",
+		"prod_description" : "Bougie fruitée",
+		"prod_prix" : 13.99,
+		"prod_ref" : 104,
+		"prod_qté" : 35,
+		"prod_image" : "img/fruits_rouges.jpg",
+		"prod_cat" : "Bougies parfumées"
+	},
+	{
+		"prod_id" : 5,
+		"prod_nom" : "Bougie Noix de Coco",
+		"prod_description" : "Bougie exotique",
+		"prod_prix" : 16.50,
+		"prod_ref" : 105,
+		"prod_qté" : 25,
+		"prod_image" : "img/coco.jpg",
+		"prod_cat" : "Bougies parfumées"
+	},
+	{
+		"prod_id" : 6,
+		"prod_nom" : "Bougie Cannelle",
+		"prod_description" : "Bougie épicée",
+		"prod_prix" : 11.99,
+		"prod_ref" : 106,
+		"prod_qté" : 45,
+		"prod_image" : "img/cannelle.jpg",
+		"prod_cat" : "Bougies décoratives"
+	},
+	{
+		"prod_id" : 7,
+		"prod_nom" : "Bougie Miel",
+		"prod_description" : "Bougie au miel naturel",
+		"prod_prix" : 18.20,
+		"prod_ref" : 107,
+		"prod_qté" : 20,
+		"prod_image" : "img/miel.jpg",
+		"prod_cat" : "Bougies décoratives"
+	},
+	{
+		"prod_id" : 8,
+		"prod_nom" : "Bougie Menthe",
+		"prod_description" : "Bougie rafraîchissante",
+		"prod_prix" : 10.99,
+		"prod_ref" : 108,
+		"prod_qté" : 30,
+		"prod_image" : "img/menthe.jpg",
+		"prod_cat" : "Bougies décoratives"
+	},
+	{
+		"prod_id" : 9,
+		"prod_nom" : "Bougie Rose",
+		"prod_description" : "Bougie florale à la rose",
+		"prod_prix" : 14.00,
+		"prod_ref" : 109,
+		"prod_qté" : 40,
+		"prod_image" : "img/rose.jpg",
+		"prod_cat" : "Bougies décoratives"
+	},
+	{
+		"prod_id" : 10,
+		"prod_nom" : "Bougie Eucalyptus",
+		"prod_description" : "Bougie purifiante",
+		"prod_prix" : 17.99,
+		"prod_ref" : 110,
+		"prod_qté" : 15,
+		"prod_image" : "img/eucalyptus.jpg",
+		"prod_cat" : "Bougies naturelles"
+	},
+	{
+		"prod_id" : 11,
+		"prod_nom" : "Bougeoir en Verre",
+		"prod_description" : "Accessoire décoratif",
+		"prod_prix" : 9.99,
+		"prod_ref" : 111,
+		"prod_qté" : 60,
+		"prod_image" : "img/bougeoir_verre.jpg",
+		"prod_cat" : "Accessoires pour bougies"
+	},
+	{
+		"prod_id" : 12,
+		"prod_nom" : "Coffret Détente",
+		"prod_description" : "Coffret cadeau avec plusieurs bougies",
+		"prod_prix" : 29.99,
+		"prod_ref" : 112,
+		"prod_qté" : 10,
+		"prod_image" : "img/coffret.jpg",
+		"prod_cat" : "Coffrets cadeaux"
+	}
+]

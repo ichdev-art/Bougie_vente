@@ -1,0 +1,36 @@
+[
+	{
+		"prod_id" : 1,
+		"com_id" : 1,
+		"use_id" : 1,
+		"use_mail" : "user1@mail.com",
+		"use_tel" : "0600000001",
+		"use_mdp" : "mdp1",
+		"use_adresse" : "10 rue A, Paris",
+		"use_nom" : "Mr Anderson",
+		"com_date" : "2025-02-20",
+		"prod_nom" : "Bougie Vanille",
+		"prod_description" : "Bougie parfumée à la vanille",
+		"prod_prix" : 15.99,
+		"prod_ref" : 101,
+		"prod_qté" : 50,
+		"prod_image" : "img/vanille.jpg"
+	},
+	{
+		"prod_id" : 3,
+		"com_id" : 1,
+		"use_id" : 1,
+		"use_mail" : "user1@mail.com",
+		"use_tel" : "0600000001",
+		"use_mdp" : "mdp1",
+		"use_adresse" : "10 rue A, Paris",
+		"use_nom" : "Mr Anderson",
+		"com_date" : "2025-02-20",
+		"prod_nom" : "Bougie Cèdre",
+		"prod_description" : "Bougie boisée au cèdre",
+		"prod_prix" : 14.75,
+		"prod_ref" : 103,
+		"prod_qté" : 40,
+		"prod_image" : "cedre.jpg"
+	}
+]
