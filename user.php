@@ -43,14 +43,18 @@ $fmt = new NumberFormatter('fr_FR', NumberFormatter::CURRENCY);
     </div>
     <div>
         <h1 class="mx-5">Commande n°<?= $commandes[0]["com_id"] ?></h1>
+        <?php foreach ($commandes as $value) {
+            
+         ?>
         <div class="row m-0 justify-content-center">
-            <img class="col-2" src="<?= $commandes[0]["prod_image"] ?>" alt="<?= $commandes[0]["prod_nom"] ?>">
+            <img class="col-2" src="<?= $value["prod_image"] ?>" alt="<?= $value["prod_nom"] ?>">
             <div class="col-8 align-content-center">
-                <p>Nom du produit : <?= $commandes[0]["prod_nom"] ?></p>
-                <p>Date de commande : <?= $commandes[0]["com_date"] ?></p>
+                <p>Nom du produit : <?= $value["prod_nom"] ?></p>
+                <p>Date de commande : <?= $value["com_date"] ?></p>
             </div>
         </div>
-    </div>
+        <?php } ?>
+        </div>
 
 
 
