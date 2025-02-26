@@ -52,7 +52,7 @@ function calculer_total_commande($tab)
 <body>
     <nav class="navbar navbar-expand-lg bg-secondary-subtle ">
         <div class="container-fluid d-flex">
-            <a class="navbar-brand" href="index.php">Bougie d'arabe</a>
+            <a class="navbar-brand" href="index.php">Boug🕯️e d'arabe</a>
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <div class="d-flex ">
                     <a href="user.php"><button class="btn btn-outline-success">Utilisateur</button></a>
