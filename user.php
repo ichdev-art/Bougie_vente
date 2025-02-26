@@ -5,7 +5,7 @@ $commandes = json_decode($string, true);
 
 $fmt = new NumberFormatter('fr_FR', NumberFormatter::CURRENCY);
 
-
+$dateF = new DateTimeImmutable($commandes[0]["com_date"]);
 
 
 
@@ -19,6 +19,27 @@ $fmt = new NumberFormatter('fr_FR', NumberFormatter::CURRENCY);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Vente de bougie</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+        a {
+            font-family: "Monserrat", sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        p {
+            font-family: "Lora", sans-serif;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -34,27 +55,37 @@ $fmt = new NumberFormatter('fr_FR', NumberFormatter::CURRENCY);
         </div>
     </nav>
     <div class="row m-0  justify-content-center">
-        <div class="col-8">
-            <p>Nom : <?= $commandes[0]["use_nom"] ?></p>
-            <p>Addresse : <?= $commandes[0]["use_adresse"] ?></p>
-            <p>Mail : <?= $commandes[0]["use_mail"] ?></p>
-            <p>N°tél : <?= $commandes[0]["use_tel"] ?></p>
+        <div class="col-9 m-2 border border-dark rounded rounded-2 d-flex flex-column align-items-center">
+            <p><b>Nom </b>: <?= $commandes[0]["use_nom"] ?></p>
+            <p><b>Addresse </b>: <?= $commandes[0]["use_adresse"] ?></p>
+            <p><b>Mail </b>: <?= $commandes[0]["use_mail"] ?></p>
+            <p><b>Numéro de téléphone </b>: <?= $commandes[0]["use_tel"] ?></p>
         </div>
     </div>
     <div>
-        <h1 class="mx-5">Commande n°<?= $commandes[0]["com_id"] ?></h1>
-        <?php foreach ($commandes as $value) {
-            
-         ?>
-        <div class="row m-0 justify-content-center">
-            <img class="col-2" src="<?= $value["prod_image"] ?>" alt="<?= $value["prod_nom"] ?>">
-            <div class="col-8 align-content-center">
-                <p>Nom du produit : <?= $value["prod_nom"] ?></p>
-                <p>Date de commande : <?= $value["com_date"] ?></p>
+        <div class="">
+            <h1 class="mx-5">Commande n°<?= $commandes[0]["com_id"] ?></h1>
+        </div>
+        <div class="row col-12 justify-content-center">
+            <?php foreach ($commandes as $value) { ?>
+                <div class="row col-8 border border-dark rounded rounded-3 bg-secondary-subtle m-1">
+                    <img height="" class="col-2" src="<?= $value["prod_image"] ?>" alt="<?= $value["prod_nom"] ?>">
+                    <div class="col-8  align-content-center">
+                        <p><b>Nom du produit</b> : <?= $value["prod_nom"] ?></p>
+                        <p><b>Date de commande</b> : <?= $dateF->format("d/m/Y") ?></p>
+                    </div>
+                </div>
+            <?php } ?>
+            <div class="d-flex justify-content-end">
+                <a href="./commande.php" class="text-decoration-none text-dark  mx-5 fs-3 border border-2 rounded border-dark p-2 bg-secondary-subtle">Voir details</a>
             </div>
         </div>
-        <?php } ?>
-        </div>
+
+    </div>
+
+
+
+
 
 
 

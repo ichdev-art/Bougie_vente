@@ -7,6 +7,8 @@ $string_avis = file_get_contents('assets/json/avis.json');
 $avis = json_decode($string_avis, true);
 $fmt = new NumberFormatter('fr_FR', NumberFormatter::CURRENCY);
 
+$dateF = new DateTimeImmutable($avis[0]["avi_date"]);
+
 function calculer_note($avis)
 {
     $sum = 0;
@@ -18,12 +20,14 @@ function calculer_note($avis)
 
 function afficher_avis($note)
 {
+
     foreach ($note as $value) {
+        $dateF = new DateTimeImmutable($value["avi_date"]);
         $note = '';
         for ($i = 0; $i < $value["avi_note"]; $i++) {
             $note .= '⭐';
         }
-        echo '<p class="fw-bold">' . $value["use_nom"] . '   : ' . $value["avi_date"] . '</p>
+        echo '<p class="fw-bold">' . $value["use_nom"] . '   : ' . $dateF->format("d/m/Y") . '</p>
         <hr>
         <p>' . $value["avi_texte"] . '</p>
         <p>' . $note . '</p>
@@ -41,7 +45,28 @@ function afficher_avis($note)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets\json\produit.css">
     <title>Vente de bougie</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+        a {
+            font-family: "Monserrat", sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        p {
+            font-family: "Lora", sans-serif;
+        }
+    </style>
 </head>
 
 <body>
@@ -73,11 +98,13 @@ function afficher_avis($note)
     <div class="row justify-content-center">
         <div class="col-8 d-flex flex-column rounded rounded-3 p-5 bg-secondary-subtle ">
 
-            <p class="fw-bold"><?= $avis[0]["use_nom"] . ' : ' . $avis[0]["avi_date"] ?> </p>
+            <p class="fw-bold"><?= $avis[0]["use_nom"] . ' : ' . $dateF->format("d/m/Y") ?> </p>
             <p> <?= $avis[0]["avi_texte"]; ?> </p>
             <p> <?php for ($i = 0; $i < $avis[0]["avi_note"]; $i++) {
-                    echo '⭐'; } ?> </p>
-            <p class="d-flex justify-content-end" ><a data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="text-decoration-none ">Voir tout</a></p>
+                    echo '⭐';
+                } ?> </p>
+
+            <div><a data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="text-decoration-none float-end">Voir tout</a></div>
         </div>
     </div>
 
