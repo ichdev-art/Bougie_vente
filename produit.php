@@ -25,12 +25,18 @@ function afficher_avis($note)
         $dateF = new DateTimeImmutable($value["avi_date"]);
         $note = '';
         for ($i = 0; $i < $value["avi_note"]; $i++) {
-            $note .= '⭐';
+            $note .= '★';
+        }
+        if ($value["avi_note"]<5) {
+            $rest=5-$value["avi_note"];
+            for ($i=0; $i <$rest ; $i++) { 
+                $note.='☆';
+            }
         }
         echo '<p class="fw-bold">' . $value["use_nom"] . '   : ' . $dateF->format("d/m/Y") . '</p>
         <hr>
         <p>' . $value["avi_texte"] . '</p>
-        <p>' . $note . '</p>
+        <p class="text-warning fs-3">' . $note . '</p>
         <br>
         ';
     }
@@ -100,9 +106,14 @@ function afficher_avis($note)
 
             <p class="fw-bold"><?= $avis[0]["use_nom"] . ' : ' . $dateF->format("d/m/Y") ?> </p>
             <p> <?= $avis[0]["avi_texte"]; ?> </p>
-            <p> <?php for ($i = 0; $i < $avis[0]["avi_note"]; $i++) {
-                    echo '⭐';
-                } ?> </p>
+            <p class="text-warning fs-3"> <?php for ($i = 0; $i < $avis[0]["avi_note"]; $i++) {
+                    echo '★';}
+                if ($avis[0]["avi_note"]<5) {
+                        $rest=5-$avis[0]["avi_note"];
+                        for ($i=0; $i <$rest ; $i++) { 
+                            echo'☆';
+                        }
+                    } ?> </p>
 
             <div><a data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="text-decoration-none float-end">Voir tout</a></div>
         </div>
