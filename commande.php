@@ -78,6 +78,11 @@ function calculer_total_commande($tab)
                         <p><b>Nom du produit</b> : <?= $value["prod_nom"] ?></p>
                         <p><b>prix du produit</b> : <?= $fmt->formatCurrency($value["prod_prix"], "EUR") ?></p>
                         <p><b>Quantité commandé</b> : x1</p>
+                        <p><b>Référence du produit</b> : <?= $value["prod_ref"] ?></p>
+                        <p><b>Description du produit</b> : <?= $value["prod_description"] ?></p>
+                        <p><b>Quantité en stock du produit</b> : <?= $value["prod_qté"] ?></p>
+
+                        
                     </div>
                 </div>
                 <hr>
