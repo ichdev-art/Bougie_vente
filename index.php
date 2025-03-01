@@ -39,6 +39,25 @@ foreach ($produits as $value) {
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 
+        body{
+            background: #F8F5F2;
+        }
+
+
+        .card {
+            border: 1px solid #A89C94
+        }
+        nav{
+            background: #F8F5F2;
+            color: #3D3D3D
+        }
+
+        .btn {
+            background: #e6d5c4
+        }
+        .btn:hover {
+            background: #C2A57B
+        }
         img {
             width: 16rem;
             height: 16rem;
@@ -75,14 +94,14 @@ foreach ($produits as $value) {
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-secondary-subtle">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">Boug🕯️e d'arabe</a>
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Catégories
@@ -95,8 +114,9 @@ foreach ($produits as $value) {
                         </ul>
                     </li>
                 </ul>
+                <a class="title navbar-brand fs-2" href="index.php">Boug🕯️e d'arabe</a>
                 <div class="d-flex">
-                    <a href="user.php"><button class="btn btn-outline-success">Utilisateur</button></a>
+                    <a href="user.php"><button class="btn border border-1 border-black rounded">Utilisateur</button></a>
                 </div>
             </div>
         </div>

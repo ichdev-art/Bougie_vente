@@ -57,6 +57,30 @@ function afficher_avis($note)
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 
+        body{
+            background: #F8F5F2;
+        }
+
+        .modal {
+            background: #F8F5F2;
+        }
+
+        .card {
+            border: 1px solid #A89C94
+        }
+        nav{
+            background: #F8F5F2;
+            color: #3D3D3D
+        }
+
+        .btn {
+            background: #e6d5c4
+        }
+        .btn:hover {
+            background: #C2A57B;
+            color: black;
+        }
+
         a {
             font-family: "Monserrat", sans-serif;
         }
@@ -77,18 +101,13 @@ function afficher_avis($note)
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-secondary-subtle ">
-        <div class="container-fluid d-flex">
-            <a class="navbar-brand" href="index.php">Boug🕯️e d'arabe</a>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <div class="d-flex ">
-                    <a href="user.php"><button class="btn btn-outline-success">Utilisateur</button></a>
-                </div>
-            </div>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid d-flex justify-content-center">
+            <a class="navbar-brand fs-2" href="index.php">Boug🕯️e d'arabe</a>
         </div>
     </nav>
     <div class="row justify-content-center m-0" id="content">
-        <img class="col-sm-3 mb-5" <?= 'src="' . $details[0]["prod_image"] . '"alt="' . $details[0]["prod_nom"] . 'image"' ?>>
+        <img class="col-sm-3 mb-5" <?= 'src="' . $details[0]["prod_img-fond"] . '"alt="' . $details[0]["prod_nom"] . 'image"' ?>>
         <div class="col-sm-6 pt-5">
             <div>
                 <h1><b><?= $details[0]["prod_nom"] ?></b></h1>

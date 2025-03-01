@@ -31,6 +31,24 @@ function calculer_total_commande($tab)
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 
+        body{
+            background: #F8F5F2;
+        }
+        nav{
+            background: #F8F5F2;
+            color: #3D3D3D
+        }
+        .btn {
+            background: #e6d5c4
+        }
+        .btn:hover {
+            background: #C2A57B
+        }
+
+        .containeer {
+            background:#E6D5C4;
+            color: #3d3d3d
+        }
         a {
             font-family: "Monserrat", sans-serif;
         }
@@ -50,18 +68,13 @@ function calculer_total_commande($tab)
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-secondary-subtle ">
-        <div class="container-fluid d-flex">
-            <a class="navbar-brand" href="index.php">Boug🕯️e d'arabe</a>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <div class="d-flex ">
-                    <a href="user.php"><button class="btn btn-outline-success">Utilisateur</button></a>
-                </div>
-            </div>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid d-flex justify-content-center">
+            <a class="navbar-brand fs-2" href="index.php">Boug🕯️e d'arabe</a>
         </div>
     </nav>
     <div class="row m-0 mt-1 mx-3  justify-content-center">
-        <div class="border border-2 border-dark rounded rounded-2 d-flex flex-column">
+        <div class="rounded rounded-2 d-flex flex-column">
             <p><b>Nom </b>: <?= $commandes[0]["use_nom"] ?></p>
             <p><b>Addresse de livraison </b>: <?= $commandes[0]["use_adresse"] ?></p>
             <p><b>Mail </b>: <?= $commandes[0]["use_mail"] ?></p>
@@ -69,11 +82,11 @@ function calculer_total_commande($tab)
             <p><b>Date de commande</b> : <?= $dateF->format("d/m/Y") ?></p>
         </div>
     </div>
-    <div class="d-flex align-items-end justify-content-around pb-3 border border-2 border-dark rounded rounded-2 mx-3">
+    <div class="containeer d-flex align-items-end justify-content-around pb-3 rounded  mx-3">
         <div class="row m-0">
             <?php foreach ($commandes as $value) { ?>
                 <div class="row col-10 mt-3">
-                    <img class="col-4" src="<?= $value["prod_image"] ?>" alt="<?= $value["prod_nom"] ?>">
+                    <img class="col-4" src="<?= $value["prod_img-fond"] ?>" alt="<?= $value["prod_nom"] ?>">
                     <div class="col-8  align-content-center">
                         <p><b>Nom du produit</b> : <?= $value["prod_nom"] ?></p>
                         <p><b>prix du produit</b> : <?= $fmt->formatCurrency($value["prod_prix"], "EUR") ?></p>
@@ -89,7 +102,7 @@ function calculer_total_commande($tab)
             <?php } ?>
         </div>
         <p class="fs-3 me-5 text-decoration-underline"><b>Total : <?= $fmt->formatCurrency(calculer_total_commande($commandes), "EUR") ?></b> </p>
-    </div>
+            </div>
 </body>
 
 </html>

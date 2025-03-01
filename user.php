@@ -23,6 +23,33 @@ $dateF = new DateTimeImmutable($commandes[0]["com_date"]);
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 
+
+        body {
+            background: #f8f5f2
+        }
+
+        .detail {
+            background: #e6d5c4
+        }
+        nav{
+            background: #F8F5F2;
+            color: #3D3D3D
+        }
+
+        .btn {
+            background: #e6d5c4
+        }
+        .btn:hover {
+            background: #C2A57B;
+            color: black;
+        }
+        .user {
+            background: #E6D5C4
+        }
+
+        .hr {
+            margin: 1rem auto;
+        }
         a {
             font-family: "Monserrat", sans-serif;
         }
@@ -44,18 +71,13 @@ $dateF = new DateTimeImmutable($commandes[0]["com_date"]);
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-secondary-subtle ">
-        <div class="container-fluid d-flex">
-            <a class="navbar-brand" href="index.php">Boug🕯️e d'arabe</a>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <div class="d-flex ">
-                    <a href="user.php"><button class="btn btn-outline-success">Utilisateur</button></a>
-                </div>
-            </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex justify-content-center">
+            <a class="navbar-brand fs-2" href="index.php">Boug🕯️e d'arabe</a>
         </div>
     </nav>
-    <div class="row m-0  justify-content-center">
-        <div class="col-9 m-2 border border-dark rounded rounded-2 d-flex flex-column align-items-center">
+    <div class="user row m-0  justify-content-center">
+        <div class="col-9 m-2 d-flex flex-column align-items-center">
             <p><b>Nom </b>: <?= $commandes[0]["use_nom"] ?></p>
             <p><b>Addresse </b>: <?= $commandes[0]["use_adresse"] ?></p>
             <p><b>Mail </b>: <?= $commandes[0]["use_mail"] ?></p>
@@ -64,20 +86,21 @@ $dateF = new DateTimeImmutable($commandes[0]["com_date"]);
     </div>
     <div>
         <div class="">
-            <h1 class="mx-5">Commande n°<?= $commandes[0]["com_id"] ?></h1>
+            <h1 class="mx-5 mt-2">Commande n°<?= $commandes[0]["com_id"] ?></h1>
         </div>
-        <div class="row col-12 justify-content-center">
+        <div class=" command row col-12 justify-content-start">
             <?php foreach ($commandes as $value) { ?>
-                <div class="row col-8 border border-dark rounded rounded-3 bg-secondary-subtle m-1">
-                    <img height="" class="col-2" src="<?= $value["prod_image"] ?>" alt="<?= $value["prod_nom"] ?>">
+                <div class="row col-8 m-1">
+                    <img height="" class="col-2" src="<?= $value["prod_img-fond"] ?>" alt="<?= $value["prod_nom"] ?>">
                     <div class="col-8  align-content-center">
                         <p><b>Nom du produit</b> : <?= $value["prod_nom"] ?></p>
                         <p><b>Date de commande</b> : <?= $dateF->format("d/m/Y") ?></p>
                     </div>
                 </div>
+                <hr class= "hr">
             <?php } ?>
             <div class="d-flex justify-content-end">
-                <a href="./commande.php" class="text-decoration-none text-dark  mx-5 fs-3 border border-2 rounded border-dark p-2 bg-secondary-subtle">Voir details</a>
+                <a href="./commande.php" class="detail text-decoration-none text-dark  mx-5 fs-4 p-2 rounded">Voir details</a>
             </div>
         </div>
 

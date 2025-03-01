@@ -14,7 +14,8 @@
 		"prod_prix" : 15.99,
 		"prod_ref" : 101,
 		"prod_qté" : 50,
-		"prod_image" : "img/vanille.jpg"
+		"prod_image" : "img/vanille.jpg",
+		"prod_img-fond" : "img/vanille.png"
 	},
 	{
 		"prod_id" : 3,
@@ -31,7 +32,8 @@
 		"prod_prix" : 14.75,
 		"prod_ref" : 103,
 		"prod_qté" : 40,
-		"prod_image" : "img/cedre.jpg"
+		"prod_image" : "img/cedre.jpg",
+		"prod_img-fond" : "img/cedre.png"
 	}
 
 ]
