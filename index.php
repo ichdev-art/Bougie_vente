@@ -38,11 +38,14 @@ foreach ($produits as $value) {
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Narrow:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
         body{
             background: #F8F5F2;
         }
 
+        .title {
+            font-family: "Lobster", sans-serif;
+        }
 
         .card {
             border: 1px solid #A89C94
@@ -114,7 +117,7 @@ foreach ($produits as $value) {
                         </ul>
                     </li>
                 </ul>
-                <a class="title navbar-brand fs-2" href="index.php">Boug🕯️e d'arabe</a>
+                <a class="title navbar-brand fs-2" href="index.php">Flamme & Délices</a>
                 <div class="d-flex">
                     <a href="user.php"><button class="btn border border-1 border-black rounded">Utilisateur</button></a>
                 </div>

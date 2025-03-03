@@ -30,7 +30,11 @@ function calculer_total_commande($tab)
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Narrow:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+        .title {
+            font-family: "Lobster",sans-serif;
+        }
         body{
             background: #F8F5F2;
         }
@@ -70,7 +74,7 @@ function calculer_total_commande($tab)
 <body>
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid d-flex justify-content-center">
-            <a class="navbar-brand fs-2" href="index.php">Boug🕯️e d'arabe</a>
+            <a class="title navbar-brand fs-2" href="index.php">Flamme & Délices</a>
         </div>
     </nav>
     <div class="row m-0 mt-1 mx-3  justify-content-center">
